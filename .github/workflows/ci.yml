@@ -9,13 +9,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-dotnet@v4
-      with: { dotnet-version: '8.0.x' }
+      with: { dotnet-version: '8.0' }
 
     - name: Restore & Build & Test
       run: |
         dotnet restore
         dotnet build -c Release --no-restore
-        dotnet test  -c Release --no-build || true   # 没有测试也不失败
+        dotnet test  -c Release --no-build || true   
 
     - name: Publish (zip)
       run: |
