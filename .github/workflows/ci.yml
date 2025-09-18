@@ -11,8 +11,8 @@ jobs:
     - uses: actions/setup-dotnet@v4
       with:
         dotnet-version: |
-          9.0.x   # add this
-          8.0.x   # keep if you also build/test any net8 projects- uses: actions/setup-dotnet@v4
+          9.0.x   
+          8.0.x   
     
     - name: Restore & Build & Test
       run: |
